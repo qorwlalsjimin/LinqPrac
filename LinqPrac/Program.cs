@@ -23,8 +23,8 @@ namespace LinqPrac
             {
                 Console.WriteLine(item);
             }
-
             Console.WriteLine("====================");
+
             //2. Linq
             var output2 = from item in input
                           where item % 2 == 0
@@ -35,6 +35,8 @@ namespace LinqPrac
             {
                 Console.WriteLine(item);
             }
+            output = output2.ToList<int>();
+            int[] output3 = output2.ToArray<int>();
         }
     }
 }
